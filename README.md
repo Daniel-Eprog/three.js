@@ -19,6 +19,29 @@ The aim of the project is to create an easy to use, lightweight, cross-browser, 
 [Forum](https://discourse.threejs.org/) &mdash;
 [Discord](https://discord.gg/56GBJwAnUS)
 
+### Installation
+To install using npm simply run the comman npm install three in the command line, in the directory you wish to add it.
+Three can be used also without a build system by implementing a provided CDN:
+		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@<version>/build/three.module.js"
+    }
+  }
+</script>
+
+<script type="module">
+
+  import * as THREE from 'three';
+
+  const scene = new THREE.Scene();
+
+</script>
+	
+Once three.js has been installe dor linked via CDN it is ready to use. See the example below.
+	
 ### Usage
 
 This code creates a scene, a camera, and a geometric cube, and it adds the cube to the scene. It then creates a `WebGL` renderer for the scene and camera, and it adds that viewport to the `document.body` element. Finally, it animates the cube within the scene for the camera.
